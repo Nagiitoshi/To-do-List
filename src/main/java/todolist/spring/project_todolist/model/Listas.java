@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
-public class List {
+public class Listas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,6 +21,14 @@ public class List {
     private String description;
     private LocalDateTime createDate;
     private boolean shared;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    public Listas(String title, String description) {
+    }
+
 
     public void addTask(){}
     public void sharedList(){}

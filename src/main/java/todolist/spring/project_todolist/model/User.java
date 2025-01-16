@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 
 @Data
@@ -21,7 +22,15 @@ public class User {
     private String email;
     private LocalDateTime dateTime;
 
-    public void createList(){}
-    public void manageProfile(){}
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Listas> listas;
+
+    public void createList(String title, String description) {
+        Listas newList = new Listas(title,description);
+
+    }
+
+    public void manageProfile() {
+    }
 
 }
