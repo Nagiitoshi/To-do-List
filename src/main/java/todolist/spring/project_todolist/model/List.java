@@ -12,16 +12,18 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
-public class User {
+public class List {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String name;
-    private String email;
-    private LocalDateTime dateTime;
+    private String title;
+    private String description;
+    private LocalDateTime createDate;
+    private boolean shared;
 
-    public void createList(){}
-    public void manageProfile(){}
+    public void addTask(){}
+    public void sharedList(){}
+    public void fileList(){}
 
 }
