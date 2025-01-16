@@ -1,4 +1,4 @@
-package rastreador.spring.project_tracker;
+package todolist.spring.project_todolist;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,10 +1,10 @@
-package rastreador.spring.project_tracker;
+package todolist.spring.project_todolist;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ProjectTrackerApplicationTests {
+class ProjectTodoListApplicationTests {
 
 	@Test
 	void contextLoads() {
