@@ -24,6 +24,9 @@ public class Listas {
     private User user;
 
     public Listas(String title, String description) {
+        this.title = title;
+        this.description = description;
+
     }
 
     public void addTask(){}
