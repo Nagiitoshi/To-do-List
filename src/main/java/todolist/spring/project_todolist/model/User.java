@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -26,11 +27,21 @@ public class User {
     private List<Listas> listas;
 
     public void createList(String title, String description) {
-        Listas newList = new Listas(title,description);
 
+        Listas newList = new Listas(title, description);
+        // Configurar o relacionamento bidirecional para garantir que a nova lista saiba a qual usuário pertence
+        newList.setUser(this);
+       // Inicializar a lista 'listas' se ela ainda não tiver sido inicializada
+        if (listas == null) {
+            listas = new ArrayList<>();
+        }
+        // Adicionar a nova lista à coleção 'listas' do usuário
+        listas.add(newList);
     }
 
     public void manageProfile() {
+
+
     }
 
 }
