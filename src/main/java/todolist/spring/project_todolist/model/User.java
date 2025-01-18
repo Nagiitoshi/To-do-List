@@ -26,10 +26,14 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Listas> listas;
 
-    public void createList(String title, String description) {
+    public void createList(String title, String description, boolean shared) {
 
         Listas newList = new Listas(title, description);
         // Configurar o relacionamento bidirecional para garantir que a nova lista saiba a qual usuário pertence
+        newList.setTitle(title);
+        newList.setDescription(description);
+        newList.setCreateDate(LocalDateTime.now());
+        newList.setShared(shared);
         newList.setUser(this);
        // Inicializar a lista 'listas' se ela ainda não tiver sido inicializada
         if (listas == null) {

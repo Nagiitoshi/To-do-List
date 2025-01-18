@@ -21,17 +21,21 @@ public class Listas {
     private String description;
     private LocalDateTime createDate;
     private boolean shared;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
     private User user;
 
     public Listas(String title, String description) {
     }
 
-
     public void addTask(){}
     public void sharedList(){}
     public void fileList(){}
+
+    public void setUser(User user) {
+        this.user = user;
+        if (user != null && !user.getListas().contains(this)) {
+            user.getListas().add(this);
+        }
+    }
+
 
 }
