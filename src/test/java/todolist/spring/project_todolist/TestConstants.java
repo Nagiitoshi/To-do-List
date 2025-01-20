@@ -9,11 +9,11 @@ import java.util.List;
 public class TestConstants {
     public static final List<Todo> TODOS = new ArrayList<>() {
         {
-            add(new Todo(9995L, "giulianabezerra", "Curtir", false, 1));
-            add(new Todo(9996L, "giulianabezerra", "Comentar", false, 1));
-            add(new Todo(9997L, "giulianabezerra", "Compartilhar", false, 1));
-            add(new Todo(9998L, "giulianabezerra", "Se Inscrever", false, 1));
-            add(new Todo(9999L, "giulianabezerra", "Ativar as Notificações", false, 1));
+            add(new Todo(9995L, "nagiItoshi", "Casa", false, 1));
+            add(new Todo(9996L, "nagiItoshi", "Carro", false, 1));
+            add(new Todo(9997L, "nagiItoshi", "Listas", false, 1));
+            add(new Todo(9998L, "nagiItoshi", "Sorry", false, 1));
+            add(new Todo(9999L, "nagiItoshi", "Anime", false, 1));
         }
     };
     public static final Todo TODO = TODOS.getFirst();

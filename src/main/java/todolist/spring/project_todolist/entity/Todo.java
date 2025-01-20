@@ -3,7 +3,8 @@ package todolist.spring.project_todolist.entity;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.NoArgsConstructor;
+
+import java.util.Objects;
 
 
 @Entity
@@ -21,6 +22,8 @@ public class Todo {
     private Boolean isCompleted;
     private int priority;
 
+    public Todo() {
+    }
     public Todo(Long id, String name, String description, Boolean isCompleted, int priority) {
         this.id = id;
         this.name = name;
@@ -28,15 +31,37 @@ public class Todo {
         this.isCompleted = isCompleted;
         this.priority = priority;
     }
-    public Todo() {
+
+
+    public Todo(String name, String description, boolean isCompleted, int priority) {
+        this.name = name;
+        this.description = description;
+        this.isCompleted = isCompleted;
+        this.priority = priority;
+
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true; // Referência na memória
+        if (o == null || getClass() != o.getClass()) return false; // Verifica classe
+        Todo todo = (Todo) o;
+        return Objects.equals(id, todo.id) &&
+                Objects.equals(name, todo.name) &&
+                Objects.equals(description, todo.description) &&
+                Objects.equals(isCompleted, todo.isCompleted) &&
+                Objects.equals(priority, todo.priority);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, description, isCompleted, priority);
     }
 
 
-    public Todo(String s, String s1, boolean b, int i) {
-    }
 
 
-    public Long getId() {
+public Long getId() {
         return id;
     }
 
@@ -60,12 +85,12 @@ public class Todo {
         this.description = description;
     }
 
-    public Boolean getCompleted() {
+    public Boolean getIsCompleted() {
         return isCompleted;
     }
 
     public void setCompleted(Boolean completed) {
-        isCompleted = completed;
+        this.isCompleted = completed;
     }
 
     public int getPriority() {

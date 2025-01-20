@@ -1,12 +1,12 @@
 DELETE FROM todos;
 
-INSERT INTO todos (id, name, description, isCompleted, priority)
- VALUES (9995, '@giulianabezerra', 'Curtir', false, 1);
-INSERT INTO todos (id, name, description, isCompleted, priority)
- VALUES (9996, '@giulianabezerra', 'Comentar', false, 1);
-INSERT INTO todos (id, name, description, isCompleted, priority)
- VALUES (9997, '@giulianabezerra', 'Compartilhar', false, 1);
-INSERT INTO todos (id, name, description, isCompleted, priority)
- VALUES (9998, '@giulianabezerra', 'Se Inscrever', false, 1);
-INSERT INTO todos (id, name, description, isCompleted, priority)
- VALUES (9999, '@giulianabezerra', 'Ativar as Notificações', false, 1);
+INSERT INTO todos (id, name, description, is_Completed, priority)
+ VALUES (9995, 'nagiItoshi', 'Casa', false, 1);
+INSERT INTO todos (id, name, description, is_Completed, priority)
+ VALUES (9996, 'nagiItoshi', 'Carro', false, 1);
+INSERT INTO todos (id, name, description, is_Completed, priority)
+ VALUES (9997, 'nagiItoshi', 'Listas', false, 1);
+INSERT INTO todos (id, name, description, is_Completed, priority)
+ VALUES (9998, 'nagiItoshi', 'Sorry', false, 1);
+INSERT INTO todos (id, name, description, is_Completed, priority)
+ VALUES (9999, 'nagiItoshi', 'Animes', false, 1);
